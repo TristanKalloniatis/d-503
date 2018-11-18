@@ -22,6 +22,7 @@
 
 import pandas as pd
 
+### Read Kaggle's raw short joke data.
 rawjokes = pd.read_csv("../../../Data/Kaggle/shortjokes.csv", index_col=0) 
 rawjokes.head(10)
 
