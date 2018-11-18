@@ -22,8 +22,11 @@
 
 import pandas as pd
 
-### Read Kaggle's raw short joke data.
+### Read Kaggle's raw short joke data and change the max number of characters to print to screen.
 rawjokes = pd.read_csv("../../../Data/Kaggle/shortjokes.csv", index_col=0) 
-rawjokes.head(10)
+pd.options.display.max_colwidth = 500
 
+rawchickenjokes = rawjokes.loc[rawjokes.Joke.str.contains('why did the chicken', case=False),:].reset_index()
+rawchickenjokes.to_csv("../../../Data/Kaggle/shortjokes_chicken_raw.csv", columns=['ID','Joke'])
 
+# This data is messy (it has many grammatical mistakes and also includes some controversial humour). Consequently, this data has been cleaned, and reformatted to shortjokes_chicken_clean.csv.
