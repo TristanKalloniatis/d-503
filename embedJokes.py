@@ -1,6 +1,6 @@
 import csv
 print("Loading word embeddings...")
-gloveEmbeddingsFile=open('fetch_data/Glove/glove.6B.50d.csv','r')
+gloveEmbeddingsFile=open('Data/GloVe/Clean/glove.6B.50d.csv','r')
 gloveEmbeddings=csv.reader(gloveEmbeddingsFile)
 gloveEmbeddingsDictionary={}
 for row in gloveEmbeddings:
