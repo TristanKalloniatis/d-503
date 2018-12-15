@@ -21,6 +21,8 @@
 # # fetch Kaggle short joke data and extract chicken jokes
 
 import pandas as pd
+import string
+import re
 
 ### Read Kaggle's raw short joke data and change the max number of characters to print to screen.
 rawjokes = pd.read_csv("../../../Data/Kaggle/shortjokes.csv", index_col=0) 
